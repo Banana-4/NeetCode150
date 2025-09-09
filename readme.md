@@ -1,6 +1,6 @@
 # NeetCode 150 - Essential LeetCode Problems
 
-This repository contains the curated list of **150 essential LeetCode problems** compiled by [NeetCode](https://neetcode.io). These problems are organized by topic to help you systematically prepare for coding interviews.
+This repository contains the solutions for the curated list of **150 essential LeetCode problems** compiled by [NeetCode](https://neetcode.io). These problems are organized by topic to help systematically prepare for coding interviews.
 
 ## Problem List by Topic
 
