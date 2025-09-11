@@ -14,7 +14,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Two Sum ✅
 * Group Anagrams ✅
 * Top K Frequent Elements ✅
-* Product of Array Except Self
+* Product of Array Except Self ✅
 * Valid Sudoku
 * Encode and Decode Strings
 * Longest Consecutive Sequence
