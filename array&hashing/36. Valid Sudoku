@@ -1,0 +1,25 @@
+class Solution:
+    def isValidSudoku(self, board: List[List[str]]) -> bool:
+        empty = '.'
+        columns = {i: set() for i in range(len(board[0]))}
+        for i in range(0, len(board), 3):
+            rows = {row: set() for row in range(i, i + 3)}
+            
+            for j in range(0, len(board[0]), 3):
+                box = set()
+                for r in range(i,i + 3):
+                    for c in range(j, j + 3):
+                        num = board[r][c]
+                        if num == empty:
+                            continue
+                        if num in columns[c]:
+                            return False
+                        if num in rows[r]:
+                            return False
+                        if num in box:
+                            return False
+                        
+                        columns[c].add(num)
+                        rows[r].add(num)
+                        box.add(num)
+        return True
