@@ -7,7 +7,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 
 ## Problem List by Topic
 
-### 1. Arrays & Hashing
+### 1. ~~Arrays & Hashing~~ 
 
 * Contains Duplicate ✅
 * Valid Anagram ✅
