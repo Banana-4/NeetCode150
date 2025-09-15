@@ -16,12 +16,12 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Top K Frequent Elements ✅
 * Product of Array Except Self ✅
 * Valid Sudoku ✅
-* Encode and Decode Strings
+* Encode and Decode Strings - Not free ⚠️
 * Longest Consecutive Sequence ✅
 
 ### 2. Two Pointers
 
-* Valid Palindrome
+* Valid Palindrome ✅
 * Two Sum II - Input Array Is Sorted
 * 3Sum
 * Container With Most Water
