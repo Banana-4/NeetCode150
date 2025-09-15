@@ -17,7 +17,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Product of Array Except Self ✅
 * Valid Sudoku ✅
 * Encode and Decode Strings
-* Longest Consecutive Sequence
+* Longest Consecutive Sequence ✅
 
 ### 2. Two Pointers
 
