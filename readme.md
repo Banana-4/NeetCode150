@@ -22,7 +22,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 ### 2. Two Pointers
 
 * Valid Palindrome ✅
-* Two Sum II - Input Array Is Sorted
+* Two Sum II - Input Array Is Sorted ✅
 * 3Sum
 * Container With Most Water
 * Trapping Rain Water
