@@ -19,7 +19,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Encode and Decode Strings - Not free ⚠️
 * Longest Consecutive Sequence ✅
 
-### 2. Two Pointers
+### 2. ~~Two Pointers~~
 
 * Valid Palindrome ✅
 * Two Sum II - Input Array Is Sorted ✅
@@ -29,7 +29,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 
 ### 3. Sliding Window
 
-* Best Time to Buy and Sell Stock
+* Best Time to Buy and Sell Stock ✅
 * Longest Substring Without Repeating Characters
 * Longest Repeating Character Replacement
 * Permutation in String
