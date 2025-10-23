@@ -1,0 +1,27 @@
+class Solution:
+    def characterReplacement(self, s: str, k: int) -> int:
+        if k >= len(s):
+            return len(s)
+        left, right = 0, 0 
+        max_freq, max_window = 1, 1 
+        counts = {s[0] : 1}
+        counts = [0] * 26
+        idx = ord(s[left]) - ord('A')
+        counts[idx] += 1
+        while True:
+            print(max_freq )
+            if (right - left + 1) - max_freq <= k:
+              right += 1
+              
+              if right == len(s):
+                max_window = max(max_window, right - left)
+                break 
+              idx = ord(s[right]) - ord('A')  
+              counts[idx] += 1
+              max_freq = max(max_freq, counts[idx])
+            else:
+                max_window = max(max_window, right - left)
+                idx = ord(s[left]) - ord('A')
+                counts[idx] -= 1
+                left += 1
+        return max_window
