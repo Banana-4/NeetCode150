@@ -32,7 +32,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Best Time to Buy and Sell Stock ✅
 * Longest Substring Without Repeating Characters ✅
 * Longest Repeating Character Replacement ✅
-* Permutation in String
+* Permutation in String ✅
 * Minimum Window Substring
 * Sliding Window Maximum
 
