@@ -1,0 +1,91 @@
+*** 424. Longest Repeating Character Replacement
+#+DATE: <2025-10-14 Tue>
+#+DATE: <2025-10-23 Thu> edit date
+**** Original def:
+You are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character.
+You can perform this operation at most k times.
+Return the length of the longest substring containing the same letter you can get after performing the above operations.
+
+**** The world of the problem:
+The world is defined by a sequence of uppercase English letters with length from 1 to 10^5.
+
+
+***** The forms of the string s, the difrent shapes of the world:
+- A sequence is a substring of continues same letters that has length l, where 1 <= l <= len(str).
+- A string is defined by its length, and the frequence of characters in that length.
+- Each substring of a string, where substring length >= 1, is a string.
+  
+****** The string shapes, based on their lengths:
+1. The smallest string that is allowed in this world is of length 1, has only one character. The sequence that i am looking for has l = 1.
+2. Next string is of length 2. In this case we have two chracters, the maximum l of a sequence is the most frequent character(two same ch or 2 difrent chs) if k = 0, no transformation is posibile.
+   If k >= 1, then we have two cases:
+   - two same characters l = 2, no transforms.
+   - two diffrent characters l = 2, we can pick any of them or both and transform them.
+3. String of length 3. This length is similar to length of 2, it is just clear what the pattern is, to get the longest sequence we find the character with the greatest frequence in this string, in a string of 3 characters, if it is of length 3 then l = 3, if it is not then l = length - most_greatest_freq if k >= length - most_greatest_freq else most_greatest_freq.
+4. String of any length, its shape is defined by length and the frequency of individual characters in this length.
+
+***** What is the longest repeating character sequence - LRCS?
+The LRCS is the greatest frequence of the same characters that are one to each other. Example string "ABBAB", LRCS = "BB" freq = 2.
+***** LRCS with replacments?
+The LRCS with replecments, substring length - most frequent character <= k. This substring is very important, it says that the most frequent character is a LRCS when the charactes can be transformed and when they cannot, if k = 0, no transformations, the inegaulety to be true substring length must equal most frequent character, subtracted they are zero, this means that no other characters are between the most frequent chracters.     
+***** Invariants:
+From previous thoughts, the main invariant for this problem is:
+len(substring) - greates_ch_frequency <= number of transformations.
+
+***** The rules of the world:
+Letters can be visited by using a pointer or pointers, a index into the string in my case because i use python.
+K changes of letter can happen.
+All the other rules of CS apply.
+****** Rules of interest:
+I can track the letter frequences seen as i traverse the string.
+Tracking what the last sequence letter was.
+Store the frequency of letters visited so far, and the length of a section.
+
+**** What values am i messuring:
+The number of transformations.
+Length of a section.
+The frequency of characters in a section.
+What the most frequent character in a section is.
+The number of operation that are needed to find the longest posiable sequence.
+
+**** The problem reduces to finding the largest window (longest substring) such that window - greatest_ch_frequency <= k (number of allowed transforamtions).
+**** Solution, algorithm:
+The string can be broke into sections of length l. Inside this pieces the invariant must hold. The goal is to break the string into bigest pieces in
+which the invariant holds.
+The solution for some string s is the length of the biggest piece where the invarinat holds.
+Now i need to make a computaion that will achive that.
+I have a window length of a substring, this means sliding window type of algorithm.
+Window defenition for this problem: substring where the invariant holds.
+The window size is not defined with a number, it is defined by a logical constraint the invarinat, windows are dynamic.
+Left and Right, Left moves forward while the invariant doesn't hold, right moves while it does. The invariant always holds when left == right, only one character.
+Once the invariant is broken, then left needs to move 1 step forward for the invariant to hold again.
+Each move of right or left is a step.
+Right step if the invariant holds:
+move right by one, add 1 to the freq of ch at rights position, check if this ch freq is the greates if it is update the greaes freq.
+left step if it doesn't:
+find out if the new window is the max_sindow if it is set it as the new window, The length of the new window is subtracted by 1, that is becasue the window growed by one when the invariant broke so right is one position further then it should be.
+remove 1 from the frequency of ch at left
+move left by 1 forward.
+once right hits the end of the string return the max_length
+***** Pseudocode:
+if k >= len(s)
+        return len(s)
+left = right = 0
+counts = [0] * 26
+counts[idx of first element] += 1
+max_window = 0
+max_freq = 0
+while True
+        if right - left + 1 - max_freq <= k
+                right++
+                if right == len(s)
+                        max_window = max(max_window, right - left)
+                        break
+                increase counts freq for s[right]
+                max_freq = max(max_freq, ch_counts[string[right]])
+        else:
+          max_window = max(max_window, right - left)
+          decrease counts for s[left]
+          left++
+return max_window
+-Key insight i don't need to reduce max_freq when the window shrinks. When the max_freq stays the same after the shrink the window size - max_freq = k, when a new character at right position is added the max_freq will update if the new character freq is greater. if it is not the next time the invariant is check it will fail and the window will shrink, so while the max_freq stays the smae the window will increase and shrink until a greaer max_freq is found in which case the execution will continue as planned. Note max_freq doesnt effect the max_window size. Not sure how this gives correct results, but on leetcode it works.  
