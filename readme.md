@@ -33,7 +33,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Longest Substring Without Repeating Characters ✅
 * Longest Repeating Character Replacement ✅
 * Permutation in String ✅
-* Minimum Window Substring
+* Minimum Window Substring ✅
 * Sliding Window Maximum
 
 ### 4. Stack
