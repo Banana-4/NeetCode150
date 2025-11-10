@@ -27,14 +27,14 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Container With Most Water ✅
 * Trapping Rain Water ✅
 
-### 3. Sliding Window
+### 3. ~~Sliding Window~~
 
 * Best Time to Buy and Sell Stock ✅
 * Longest Substring Without Repeating Characters ✅
 * Longest Repeating Character Replacement ✅
 * Permutation in String ✅
 * Minimum Window Substring ✅
-* Sliding Window Maximum
+* Sliding Window Maximum ✅
 
 ### 4. Stack
 
