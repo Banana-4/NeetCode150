@@ -38,7 +38,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 
 ### 4. Stack
 
-* Valid Parentheses
+* Valid Parentheses ✅
 * Min Stack
 * Evaluate Reverse Polish Notation
 * Generate Parentheses
