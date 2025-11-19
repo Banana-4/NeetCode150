@@ -42,7 +42,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Min Stack ✅
 * Evaluate Reverse Polish Notation ✅
 * Generate Parentheses ✅
-* Daily Temperatures
+* Daily Temperatures ✅
 * Car Fleet
 * Largest Rectangle in Histogram
 
