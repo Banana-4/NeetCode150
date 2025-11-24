@@ -43,7 +43,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Evaluate Reverse Polish Notation ✅
 * Generate Parentheses ✅
 * Daily Temperatures ✅
-* Car Fleet
+* Car Fleet ✅
 * Largest Rectangle in Histogram
 
 ### 5. Binary Search
