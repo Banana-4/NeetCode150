@@ -36,7 +36,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Minimum Window Substring ✅
 * Sliding Window Maximum ✅
 
-### 4. Stack
+### 4. ~~Stack~~
 
 * Valid Parentheses ✅
 * Min Stack ✅
@@ -44,7 +44,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Generate Parentheses ✅
 * Daily Temperatures ✅
 * Car Fleet ✅
-* Largest Rectangle in Histogram
+* Largest Rectangle in Histogram ✅
 
 ### 5. Binary Search
 
