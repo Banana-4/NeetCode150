@@ -4,11 +4,17 @@ class Solution:
         node = head
         while list1 or list2:
             if not list1:
-                node.next = list2
-                list2 = list2.next
+                while list2:
+                    node.next = list2
+                    list2 = list2.next
+                    node = node.next
+                break
             elif not list2:
-                node.next = list1
-                list1 = list1.next
+                while list1:
+                    node.next = list1
+                    list1 = list1.next
+                    node = node.next
+                break
             elif list1.val < list2.val:
                 node.next = list1
                 list1 = list1.next
