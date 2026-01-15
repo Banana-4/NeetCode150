@@ -11,6 +11,7 @@ class Solution:
                 list2 = list2.next
             node = node.next
         node.next = list1 or list2
-        node = head.next
-        head.next = None
-        return node
+        node = head
+        head = head.next
+        node.next = None
+        return head
