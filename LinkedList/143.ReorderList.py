@@ -19,7 +19,4 @@ class Solution:
             i += 1
             nodes[j].next = nodes[i]
             j -= 1
-        if len(nodes) % 2:
-            nodes[j].next = None
-        else:
-            nodes[j + 1].next = None
+        nodes[i].next = None
