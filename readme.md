@@ -60,7 +60,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 
 * Reverse Linked List ✅
 * Merge Two Sorted Lists ✅
-* Reorder List
+* Reorder List ✅
 * Remove Nth Node from End of List
 * Copy List with Random Pointer
 * Add Two Numbers
