@@ -62,7 +62,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Merge Two Sorted Lists ✅
 * Reorder List ✅
 * Remove Nth Node from End of List ✅
-* Copy List with Random Pointer
+* Copy List with Random Pointer ✅
 * Add Two Numbers
 * Linked List Cycle
 * Find the Duplicate Number
