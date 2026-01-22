@@ -60,7 +60,7 @@ class Solution:
 
 
 ## Hash map solution:
-This solution is too a two pass algorithm.
+This solution is a two pass algorithm.
 The only difrence is that no change is done to the original list, the input and copy nodes are group by using the Python dict object, key input node : value its copy node
 
 ### Time complexity:
@@ -87,4 +87,33 @@ class Solution:
             node.random = groups.get(node.random, None)
             node = node.next
         return newHead.next
+```
+## Hash map simplified solution:
+This solution is a two pass algorithm.
+First pass:
+    iterate through the list =, creating a new node with only the current nodes vlaue copied into it, and group the new node with the old one in a hash map, old_node : new_node
+Second pass:
+    Iterate again the list, but this time seting the new nodes next and random pointers to the nodes that are associated with the keys
+    current.next and current.random.
+return the node that is mapped to the head node.
+### Time complexity:
+O(n)
+### Memory complexety:
+O(n)
+
+### Code:
+``` Python
+   def copyRandomList(self, head: "Optional[Node]") -> "Optional[Node]":
+        current = head
+        groups = {}
+        while current:
+            node = Node(current.val)
+            groups[current] = node
+            current = current.next
+        current = head
+        while current:
+            groups[current].random = groups.get(current.random, None)
+            groups[current].next = groups.get(current.next, None)
+            current = current.next
+        return groups.get(head, None)
 ```
