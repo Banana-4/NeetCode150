@@ -63,7 +63,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Reorder List ✅
 * Remove Nth Node from End of List ✅
 * Copy List with Random Pointer ✅
-* Add Two Numbers
+* Add Two Numbers ✅
 * Linked List Cycle
 * Find the Duplicate Number
 * LRU Cache
