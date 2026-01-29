@@ -64,7 +64,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Remove Nth Node from End of List ✅
 * Copy List with Random Pointer ✅
 * Add Two Numbers ✅
-* Linked List Cycle
+* Linked List Cycle ✅
 * Find the Duplicate Number
 * LRU Cache
 * Merge K Sorted Lists
