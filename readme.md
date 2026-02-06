@@ -66,7 +66,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Add Two Numbers ✅
 * Linked List Cycle ✅
 * Find the Duplicate Number ✅
-* LRU Cache
+* LRU Cache ✅
 * Merge K Sorted Lists
 * Reverse Nodes in K-Group
 
