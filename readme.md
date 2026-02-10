@@ -67,7 +67,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Linked List Cycle ✅
 * Find the Duplicate Number ✅
 * LRU Cache ✅
-* Merge K Sorted Lists
+* Merge K Sorted Lists ✅
 * Reverse Nodes in K-Group
 
 ### 7. Trees
