@@ -1,0 +1,103 @@
+
+* Problem
+Merge a array of k increasingly sorted linked lists in sorted order.
+
+* Constrains
+1. k == lists.length.
+2. 0 <= k <= 10^4.
+3. 0 <= lists[i].length <= 500.
+4. -10^4 <= lists[i][j] <= 10^4.
+5. The sum of lists[i].length will not exceed 10^4.
+6. lists[i] is sorted in ascending order.
+
+* Analysis:
+** Step 1 data shape:
+0. input is a sparse data structure, one item at a time.
+1. k sorted lists.
+2. the mege starts at the heads.
+3. the smallest nodes are at the heads.
+4. next pointers always point to larger nodes.
+5. The largest nodes are at the tails.
+
+** Step 2 how does the data shape relate to merging:
+1. Merging is done similar to merge sort.
+2. At each step i have at least k nodes to choose from
+3. I need to find the smallest of the nodes.
+4. then advance the smallest node to its next node.
+
+** Step 3, how to pick the smallest:
+4. Best way to do it is to keep them in sorted  order, in a data structure.
+5. Finding the smallest node is now easy, it is at the end or the start of the DS.
+** Step 4, what happens after picking:
+1. The smallest node is removed from the DS and put in node.
+2. It is put as the next node of the new list
+3. the new list advances
+4. the node advances
+5. if the node is not null it needs to be put again in the DS.
+6. The new node breaks the DS order, not good the sorted order of the DS must always be maintained.
+
+** Step 5, how to maintain the order of the DS:
+1. Using a heap
+
+
+* Visualization:
+
+#+begin_src
+
+[0][1][2][3][4] --> array of k lists
+
+ k nodes in order
+
+[] smallest node idx
+[] |
+[] |
+[] |
+[] largest node idx
+
+
+   [node] -> new k list
+
+[]
+[]
+[]
+[]
+
+advance smalest node
+
+[]
+[]
+[s] put it in the right place of the stack
+[]
+[]
+
+repeat until stack has elements
+
+__ --> empty stack
+
+[0]->[1]->[2]...->[n] new merged sorted list
+
+
+#+end_src
+
+
+
+* Invariant:
+ At each step the stack contains the smallest remaing nodes in sorted order.
+
+* Solution, stacking nodes:
+The solution is heap based.
+- push all nodes from the lists to the heap.
+- create a dummy node for the head of the merged list
+- While heap has elements
+        - get the smallest node from the heap
+        - put the smallest node as the next node of the merged list.
+        - advence node
+        - advance merged list
+        - if node push it to the heap
+- return dummy.next
+** Time Complexity:
+        O(logk*n)
+
+** Space Complexity:
+        O(k)
+
