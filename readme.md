@@ -68,7 +68,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Find the Duplicate Number ✅
 * LRU Cache ✅
 * Merge K Sorted Lists ✅
-* Reverse Nodes in K-Group
+* Reverse Nodes in K-Group ✅
 
 ### 7. Trees
 
