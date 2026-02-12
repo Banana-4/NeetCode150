@@ -56,7 +56,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Time Based Key-Value Store ✅
 * Median of Two Sorted Arrays
 
-### 6. Linked List
+### 6. ~~Linked List~~
 
 * Reverse Linked List ✅
 * Merge Two Sorted Lists ✅
