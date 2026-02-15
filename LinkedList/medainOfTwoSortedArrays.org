@@ -1,0 +1,62 @@
+#+TITLE: LeetCode 4.
+#+author: banana
+#+date: <2026-02-15 Sun>
+
+* Problem:
+Given two sorted arrays, of length m and n, find the median of the two arrays joined together.
+Find the element that would be in the middle position,  (m + n) / 2, or if (m + n) are even the avarege of the two center elements.
+** Constrains:
+O(log(m + n))
+Required binary search or some other divide and conquer method.
+
+* Input Data:
+Two sorted arrays.
+Can be any sorted combiantion of numbers.
+Example 1: 1, 2, 222222222,..... 3333333.
+Example 2: 2123123213, 334323434343434...
+Example 3: 1, 2, 3, 4, 5, 5
+
+nums1[i] > nums2[j] -> the numbers in partitions [0, j] compared to [0, i] are smaller or equal, there is no larger number in nums2[0, j] the opposite is also true.
+
+* Output Data:
+Single element from the combined array, that is at center position or the average of two central elements.
+A element that is equally distant from the ends of the combined elements.
+
+* Combined array:
+There are a couple of ways that the arrays can be combined to form a sorted array.
+They can be combined like in merge sort, the merge at position i consumes always the smallest element of the remaining elements of the arrays.
+The sum of consumed elements minus 1, equals  the current choice position i of the merged array.
+if nums1[k] > nums2[j], all the elements of nums2 that are in range [0, j] will be merged before nums1[k] is merged.
+
+* Connection of input and output:
+The median element is one of the elements that is at position nums1[k] or nums2[j], k + j = (m + n) / 2
+Without merging i have no possibility of knowing what k and j are.
+All the elements behinde nums1[k] are smaller then nums2[j] if nums2[j] >= nums1[k] or the opposite.
+
+* Can I use binary search to find k and j?
+Yes, for searching what number would be at the median position. That would be the smallest of the two arrays at position k = ((m + n) / 2) / 2.
+The choice of the smallest elements comes from the previous fact, the smallest elements are consumed first, all the elements to k are smaller than the kth element, that means they will be picked first.
+If the m + n is even, than i need to search for the k + 1 element.
+That is done by searching in the larger kth element array for a element that is smaller then k + 1, equal to k or if no such element exists then it is k + 1.
+then calculating the average of the two as the median.
+
+* Pipeline:
+#+begin_src text
+[nums1, nums2]
+
+👇
+[calculate k]
+[choose the search array and the start value] --> [check if the picked value has to its left (m+n) / 2 elements] ---> [if yes it is the median else the median is the k element of the other array] ---> [if m + n is even] --->[ find the second center median] ---> [calculate average for the median] ----> [return median]
+#+end_src
+
+** Good guess:
+The best possible guess would be  k = j = ((m+ n) / 2) / 2.
+Is this a good start state?
+Exapmle: [1,3] and [2]
+med = 1
+k = j = 1 / 2 = 0
+Yes, it is i just pick the smaller off the two numbers and check if it is the median by counting the elements that are smaller in the oposite array to see if it is the elment that would be inserted in that position.
+if it isnt i pick the mid element of the range 0, k in the same array. This eliminates one of the arrays for the choosing.
+if none match then the median is in the other array at position k.
+
+* This is a hard problem.
