@@ -1,0 +1,41 @@
+#+TITLE: LeetCode 4.
+#+author: banana
+#+date: <2026-02-15 Sun>
+
+* Problem:
+Given two sorted arrays, of length m and n, find the median of the two arrays joined together.
+Find the element that would be in the middle position,  (m + n) / 2, or if (m + n) are even the avarege of the two center elements.
+** Constrains:
+O(log(m + n))
+Required binary search or some other divide and conquer method.
+* Analysis:
+This is a search problem.
+** Input Data:
+Two sorted arrays.
+Can be any sorted combiantion of numbers.
+Example 1: 1, 2, 222222222,..... 3333333.
+Example 2: 2123123213, 334323434343434...
+Example 3: 1, 2, 3, 4, 5, 5
+
+nums1[i] > nums2[j] -> the numbers in partitions [0, j] compared to [0, i] are smaller or equal, there is no larger number in nums2[0, j] the opposite is also true.
+
+** Combined array comb, output data:
+1. Length l = m + n
+2. median = comb[l / 2 ] or for even l median = (comb[l/2] + comb[l / 2 + 1]) / 2
+3. The median defines the partion of the original array of size l / 2.
+
+** For what am i searching:
+1. I am searching for a element that marks the end of partiton of comb that has length l / 2.
+2. For even l the search is for a element that marks the end of partion of size l/2 + 1.
+3. Searching for partitons eliminates the need for joing the two arrays to find the medium.
+
+** How to search for partitions:
+1. First i need to know what is a partion in a sorted array.
+   A partion is a subset of elements of the array with a length, start and end.
+   A partition can be identified by:
+   - The start position and the end position in the array,
+   - The count of elements in it.
+2. I dont have a complete sorted array just two sorted pieces.
+3. i can use the start and end position for partitions.
+4. But i can count the elements that are to the left of the last partion element.
+5. How can i do this efficiently?
