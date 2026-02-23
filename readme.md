@@ -46,7 +46,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Car Fleet ✅
 * Largest Rectangle in Histogram ✅
 
-### 5. Binary Search
+### 5. ~~Binary Search~~
 
 * Binary Search ✅
 * Search a 2D Matrix ✅
@@ -54,7 +54,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Search in Rotated Sorted Array ✅
 * Find Minimum in Rotated Sorted Array ✅
 * Time Based Key-Value Store ✅
-* Median of Two Sorted Arrays
+* Median of Two Sorted Arrays ✅
 
 ### 6. ~~Linked List~~
 
