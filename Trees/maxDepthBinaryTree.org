@@ -1,0 +1,43 @@
+#+title: 104. Maximum Depth of Binary Tree
+#+author: banana
+#+date: <2026-02-27 Fri>
+
+* Problem:
+** LeetCode statment:
+Given the root of a binary tree, return its maximum depth.
+A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+** My own:
+Find the longest possible path  from the root to a leaf node.
+The path length is the number of nodes in it.
+* Input Data:
+  1. A root node.
+  2. The length of the path is 1 if the nodes is not zero else 0.
+  3. Each node has two paths.
+
+* Output Data:
+  1. The count of nodes in the longest path.
+  2. The max count for a node is 1 + the greater of the count of nodes in the left path and right path.
+  3. The max count for the whole tree is the sum of all the max counts from the leafs to the root.
+* Invariant:
+For a none null node the max depth is always 1 plus the max depth of the left subtree if left subtree max depth is greater then right subtree max depth or 1 + max depth of right subtree if the previous is not true.
+
+* Solution:
+The problem is recursive, the current node solution depends on the same solution of the next nodes.
+Start at the root of the tree and do the same for each subtree.
+1. if root is null return 0.
+2. get max depth of left side, leftDepth
+3. get max depth of right side, rightDepth
+4. return 1 + the maximum of leftDepth and rightDepth
+
+The space complexity is the max height of the tree. It is the solution of the problem.
+
+* Time Complexity:
+O(n)
+
+* Space Complexity:
+O(H)
+
+
+* Conclusion:
+Another easy problem. The purpose of the problem is to give me "light weight" to build strength for future hard problems.
+The problem teaches me how to find the memory size needed for a tree traversal.
