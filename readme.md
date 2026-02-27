@@ -72,7 +72,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 
 ### 7. Trees
 
-* Invert Binary Tree
+* Invert Binary Tree ✅
 * Maximum Depth of Binary Tree
 * Diameter of Binary Tree
 * Balanced Binary Tree
