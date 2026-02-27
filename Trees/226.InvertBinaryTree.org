@@ -1,0 +1,36 @@
+#+title: LeetCode 226
+#+author: banana
+#+date: <2026-02-27 Fri>
+
+* Problem:
+Invert a binary tree structure, such that left is right and right is left.
+
+* Logical Flow:
+** Input:
+1. A tree structure, a recursive node based data structure.
+2. A node defines the whole tree structure.
+3. A tree needs to have a root.
+** Output:
+1. Node with Left and Right swaped.
+
+* Invariant:
+A tree has always a root, root is never null.
+
+* Tree inverting:
+Treat each node as a tree.
+For each node:
+ 1. root must not be null.
+ 2. swap nodes left and right.
+ 3. Do the same to the left side.
+ 4. Do it to the right side.
+ 5. This naturally translates to recursion.
+
+
+* Time Complexity:
+O(n)
+* Space Complexity:
+O(1)
+
+* Conclusion:
+This problem demonstrates a good use for recursion.
+Recursion is powerfull for recursive defined data structures.
