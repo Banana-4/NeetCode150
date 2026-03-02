@@ -74,7 +74,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 
 * Invert Binary Tree ✅
 * Maximum Depth of Binary Tree ✅
-* Diameter of Binary Tree
+* Diameter of Binary Tree ✅
 * Balanced Binary Tree
 * Same Tree
 * Subtree of Another Tree
