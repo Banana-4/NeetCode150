@@ -76,7 +76,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Maximum Depth of Binary Tree ✅
 * Diameter of Binary Tree ✅
 * Balanced Binary Tree ✅
-* Same Tree
+* Same Tree ✅
 * Subtree of Another Tree
 * Lowest Common Ancestor of a BST
 * Binary Tree Level Order Traversal
