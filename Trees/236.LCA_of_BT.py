@@ -8,25 +8,23 @@
 class Solution:
     def DFS(self, root, p, q, found, path):
         if not root:
-            return
+            return False
         if root.val == p:
             found[0] = True
             if not found[1]:
                 path.append(root)
+            else:
+                return True
         if root.val == q:
             found[1] = True
             if not found[0]:
                 path.append(root)
-        if found[0] and found[1]:
-            return
+            else:
+                return True
         if not found[1] and not found[0]:
             path.append(root) 
-        self.DFS( root.left, p, q, found, path)
-        if found[0] and found[1]:
-            return
-        self.DFS( root.right, p, q, found, path)
-        if found[0] and found[1]:
-            return
+        if self.DFS( root.left, p, q, found, path) or self.DFS( root.right, p, q, found, path):
+            return True
         if root == path[-1]:
             path.pop()
 
