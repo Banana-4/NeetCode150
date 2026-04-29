@@ -78,7 +78,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Balanced Binary Tree ✅
 * Same Tree ✅
 * Subtree of Another Tree ✅
-* Lowest Common Ancestor of a BST
+* Lowest Common Ancestor of a BST ✅
 * Binary Tree Level Order Traversal
 * Binary Tree Right Side View
 * Count Good Nodes in Binary Tree
