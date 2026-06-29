@@ -81,7 +81,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Lowest Common Ancestor of a BST ✅
 * Binary Tree Level Order Traversal ✅
 * Binary Tree Right Side View ✅
-* Count Good Nodes in Binary Tree
+* Count Good Nodes in Binary Tree ✅
 * Validate Binary Search Tree
 * Kth Smallest Element in a BST
 * Construct Binary Tree from Preorder and Inorder Traversal
