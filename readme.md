@@ -84,7 +84,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Count Good Nodes in Binary Tree ✅
 * Validate Binary Search Tree ✅
 * Kth Smallest Element in a BST ✅
-* Construct Binary Tree from Preorder and Inorder Traversal
+* Construct Binary Tree from Preorder and Inorder Traversal ✅
 * Binary Tree Maximum Path Sum
 * Serialize and Deserialize Binary Tree
 
