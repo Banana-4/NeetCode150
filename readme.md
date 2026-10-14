@@ -85,7 +85,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Validate Binary Search Tree ✅
 * Kth Smallest Element in a BST ✅
 * Construct Binary Tree from Preorder and Inorder Traversal ✅
-* Binary Tree Maximum Path Sum
+* Binary Tree Maximum Path Sum ✅
 * Serialize and Deserialize Binary Tree
 
 ### 8. Trie
