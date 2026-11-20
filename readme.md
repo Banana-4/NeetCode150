@@ -70,7 +70,7 @@ Do not look inside yourself for solutions. Do not be proud or think that the sol
 * Merge K Sorted Lists ✅
 * Reverse Nodes in K-Group ✅
 
-### 7. Trees
+### 7. ~~Trees~~
 
 * Invert Binary Tree ✅
 * Maximum Depth of Binary Tree ✅
